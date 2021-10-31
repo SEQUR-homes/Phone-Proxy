@@ -9,7 +9,7 @@
     "prestart": "tsc",
     "start": "twilio-run start",
     "predeploy": "tsc",
-    "deploy": "twilio-run deploy",
+    "deploy": "twilio-run deploy --username $TWILIO_API_KEY --password $TWILIO_API_SECRET",
     "precommit": "npm run lint && npm run predeploy",
     "prepare": "husky install"
   },
