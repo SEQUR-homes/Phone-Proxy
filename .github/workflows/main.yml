@@ -33,6 +33,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Install dependencies for the twilio function
         run: npm ci
+
+      - name: Run linter
+        run: npm run lint
         
       - name: Install twilio cli and run deploy command
         env:
