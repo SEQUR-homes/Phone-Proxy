@@ -43,4 +43,4 @@ jobs:
          ORGANISER_PHONE: ${{ secrets.ORGANISER_PHONE }}
          PROXY_PHONE: ${{ secrets.PROXY_PHONE }}
         # Install the Twilio CLI and the serverless plugin then deploy the function
-        run: npm install twilio-cli -g && twilio plugins:install @twilio-labs/plugin-serverless && npm run deploy" 
+        run: "npm install twilio-cli -g && twilio plugins:install @twilio-labs/plugin-serverless && npm run deploy" 
