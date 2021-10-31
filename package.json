@@ -10,7 +10,7 @@
     "start": "twilio-run start",
     "predeploy": "tsc",
     "deploy": "twilio-run deploy",
-    "precommit": "npm run format && npm run lint && npm run predeploy",
+    "precommit": "npm run lint && npm run predeploy",
     "prepare": "husky install"
   },
   "dependencies": {
