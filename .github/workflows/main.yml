@@ -7,8 +7,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -45,4 +43,4 @@ jobs:
          ORGANISER_PHONE: ${{ secrets.ORGANISER_PHONE }}
          PROXY_PHONE: ${{ secrets.PROXY_PHONE }}
         # Install the Twilio CLI and the serverless plugin then deploy the function
-        run: npm install twilio-cli -g && twilio plugins:install @twilio-labs/plugin-serverless && twilio serverless:deploy --environment=dev -n sequr-phone-proxy --force
+        run: npm install twilio-cli -g && twilio plugins:install @twilio-labs/plugin-serverless && npm run deploy" 
