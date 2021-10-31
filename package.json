@@ -1,0 +1,25 @@
+{
+  "name": "sequr-phone-proxy",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "tsc",
+    "start": "twilio-run start",
+    "predeploy": "tsc",
+    "deploy": "twilio-run deploy --username $TWILIO_API_KEY --password $TWILIO_API_SECRET"
+  },
+  "dependencies": {
+    "@twilio-labs/serverless-runtime-types": "^2.2.0",
+    "@twilio/runtime-handler": "1.2.0",
+    "twilio": "^3.56"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "twilio-run": "^3.3.0",
+    "typescript": "^4.4.4"
+  },
+  "engines": {
+    "node": "12"
+  }
+}
