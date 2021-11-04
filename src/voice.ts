@@ -44,6 +44,10 @@ export const handler: ServerlessFunctionSignature = function (
   } else {
     // forward call to your private phone number
     twiml.dial({ callerId: proxyPhoneNumber }, privatePhoneNumber);
+    twiml.sms(
+      { from: proxyPhoneNumber, to: privatePhoneNumber },
+      `Call from: ${event.From}`
+    );
     return callback(null, twiml);
   }
 };
