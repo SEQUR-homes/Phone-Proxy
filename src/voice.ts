@@ -42,6 +42,7 @@ export const handler: ServerlessFunctionSignature = function (
     twiml.say("We didn't receive any input. Goodbye!");
     return callback(null, twiml);
   } else {
+    return callback(null, twiml);
     // forward call to your private phone number
     twiml.dial({ callerId: proxyPhoneNumber }, privatePhoneNumber);
     twiml.sms(
